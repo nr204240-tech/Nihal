@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Inventory Management System</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <div class="logo-box">IMS</div>
+        Inventory Management
+      </div>
+      <div class="navbar-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="product-form.html">Add Product</a>
+      </div>
+      <div class="navbar-user">
+        <span class="user-name" id="user-name"></span>
+        <button id="logout-btn" class="btn btn-logout btn-sm">Logout</button>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <main class="page">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Products</h1>
+          <p class="page-subtitle">Search, edit, and manage your inventory</p>
+        </div>
+        <a href="product-form.html" class="btn btn-primary">
+          + Add New Product
+        </a>
+      </div>
+
+      <!-- Search box -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search by name or category..."
+        />
+      </div>
+
+      <!-- Products table -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th class="hide-mobile">Category</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="products-table">
+            <!-- Rows are added here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script type="module" src="/js/products.js"></script>
+  </body>
+</html>

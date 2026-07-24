@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product - Inventory Management System</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <div class="logo-box">IMS</div>
+        Inventory Management
+      </div>
+      <div class="navbar-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="product-form.html" class="active">Add Product</a>
+      </div>
+      <div class="navbar-user">
+        <span class="user-name" id="user-name"></span>
+        <button id="logout-btn" class="btn btn-logout btn-sm">Logout</button>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <main class="page">
+      <div class="page-header">
+        <div>
+          <!-- Title changes to "Edit Product" when editing -->
+          <h1 class="page-title" id="form-title">Add Product</h1>
+          <p class="page-subtitle" id="form-subtitle">
+            Fill in the details below to add a new product
+          </p>
+        </div>
+        <a href="products.html" class="btn btn-secondary">Back to Products</a>
+      </div>
+
+      <!-- The product form -->
+      <div class="card">
+        <form id="product-form">
+          <div id="form-error" class="form-error"></div>
+
+          <div class="form-group">
+            <label for="name">Product Name *</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="e.g. Wireless Mouse"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <input
+              type="text"
+              id="category"
+              placeholder="e.g. Electronics"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price (Rs.) *</label>
+            <input
+              type="number"
+              id="price"
+              placeholder="e.g. 1500"
+              min="0"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity *</label>
+            <input
+              type="number"
+              id="quantity"
+              placeholder="e.g. 25"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              placeholder="Optional notes about this product"
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <a href="products.html" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary" id="save-btn">
+              Save Product
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script type="module" src="/js/product-form.js"></script>
+  </body>
+</html>
