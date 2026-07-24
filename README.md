@@ -1,2 +1,96 @@
-# Nihal
-Nice to gooo
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Inventory Management System</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar (shared on all pages) -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <div class="logo-box">IMS</div>
+        Inventory Management
+      </div>
+      <div class="navbar-links">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="product-form.html">Add Product</a>
+      </div>
+      <div class="navbar-user">
+        <span class="user-name" id="user-name"></span>
+        <button id="logout-btn" class="btn btn-logout btn-sm">Logout</button>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <main class="page">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-subtitle">An overview of your inventory</p>
+        </div>
+        <a href="product-form.html" class="btn btn-primary">+ Add New Product</a>
+      </div>
+
+      <!-- Stat cards (filled in by JavaScript) -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">&#128230;</div>
+          <div>
+            <div class="stat-value" id="stat-total">0</div>
+            <div class="stat-label">Total Products</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">&#9989;</div>
+          <div>
+            <div class="stat-value" id="stat-in-stock">0</div>
+            <div class="stat-label">In Stock</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange">&#9888;</div>
+          <div>
+            <div class="stat-value" id="stat-low-stock">0</div>
+            <div class="stat-label">Low Stock</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon teal">&#128176;</div>
+          <div>
+            <div class="stat-value" id="stat-value">Rs.0</div>
+            <div class="stat-label">Inventory Value</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recently added products -->
+      <div class="page-header">
+        <h2 class="page-title" style="font-size: 20px">Recent Products</h2>
+        <a href="products.html" class="btn btn-secondary btn-sm">View All</a>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recent-products">
+            <!-- Rows are added here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
+
