@@ -6,8 +6,8 @@
 
 // The dummy username and password. In a real app this would be
 // checked on a secure server, but here we keep it simple.
-const DUMMY_USER = "admin";
-const DUMMY_PASSWORD = "admin123";
+const DUMMY_USER = "nihal";
+const DUMMY_PASSWORD = "nihal123";
 
 // The key used to remember that someone is logged in.
 const SESSION_KEY = "ims_session";
