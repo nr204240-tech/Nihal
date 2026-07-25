@@ -1,96 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Inventory Management System</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <!-- Top navigation bar (shared on all pages) -->
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <div class="logo-box">IMS</div>
-        Inventory Management
-      </div>
-      <div class="navbar-links">
-        <a href="dashboard.html" class="active">Dashboard</a>
-        <a href="products.html">Products</a>
-        <a href="product-form.html">Add Product</a>
-      </div>
-      <div class="navbar-user">
-        <span class="user-name" id="user-name"></span>
-        <button id="logout-btn" class="btn btn-logout btn-sm">Logout</button>
-      </div>
-    </nav>
+# Inventory Management System (IMS)
 
-    <!-- Page content -->
-    <main class="page">
-      <div class="page-header">
-        <div>
-          <h1 class="page-title">Dashboard</h1>
-          <p class="page-subtitle">An overview of your inventory</p>
-        </div>
-        <a href="product-form.html" class="btn btn-primary">+ Add New Product</a>
-      </div>
+A web-based dashboard for managing product inventory in real time. 
+Built as a front-end project using HTML, CSS, and JavaScript, it provides 
+a simple and clean interface to track stock, add new products, and 
+manage day-to-day inventory operations.
 
-      <!-- Stat cards (filled in by JavaScript) -->
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon blue">&#128230;</div>
-          <div>
-            <div class="stat-value" id="stat-total">0</div>
-            <div class="stat-label">Total Products</div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon green">&#9989;</div>
-          <div>
-            <div class="stat-value" id="stat-in-stock">0</div>
-            <div class="stat-label">In Stock</div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon orange">&#9888;</div>
-          <div>
-            <div class="stat-value" id="stat-low-stock">0</div>
-            <div class="stat-label">Low Stock</div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon teal">&#128176;</div>
-          <div>
-            <div class="stat-value" id="stat-value">Rs.0</div>
-            <div class="stat-label">Inventory Value</div>
-          </div>
-        </div>
-      </div>
+## Features
+- 📊 Dashboard overview of current inventory status
+- ➕ Add new products via a dedicated form
+- 📋 View and manage the full product list
+- 🔐 User session display with logout functionality
+- 🧭 Consistent navigation bar across all pages
 
-      <!-- Recently added products -->
-      <div class="page-header">
-        <h2 class="page-title" style="font-size: 20px">Recent Products</h2>
-        <a href="products.html" class="btn btn-secondary btn-sm">View All</a>
-      </div>
+## Pages
+- dashboard.html – Main overview page
+- products.html – View all products
+- product-form.html – Add a new product
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="recent-products">
-            <!-- Rows are added here by JavaScript -->
-          </tbody>
-        </table>
-      </div>
-    </main>
+## Tech Stack
+- HTML5
+- CSS3
+- JavaScript
 
-    <script type="module" src="/js/dashboard.js"></script>
-  </body>
-</html>
+## How to Run
+1. Clone this repository
+2. Open dashboard.html in your browser
+3. Navigate using the top navbar
+   ## Status
+🚧 Work in progress — features and styling are being actively improved
 
+## Status
+🚧 Work in progress — features and styling are being actively improved.
